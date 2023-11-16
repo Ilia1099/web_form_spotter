@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from app.api.routes import spot_form
 
 app = FastAPI()
+app.include_router(spot_form.router)
 
 
 @app.get("/")
