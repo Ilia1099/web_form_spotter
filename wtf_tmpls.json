@@ -1,0 +1,16 @@
+{"_default": {
+  "1": {
+    "name": "SimpleTemplate", "full_name": "text", "phone_num": "phone"
+  },
+  "2": {
+    "name": "OrdinaryTemplate", "first_name": "text", "surname": "text",
+    "date_of_birth": "datetime", "phone_num": "phone"
+  },
+  "3": {
+    "name": "SimpleTemplate", "full_name": "text", "comment": "text",
+    "created": "datetime"
+  },
+  "4": {
+    "name": "simpliesttemplate", "sum_of_order": "text"}
+}
+}
