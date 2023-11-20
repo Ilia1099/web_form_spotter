@@ -1,14 +1,18 @@
-from datetime import datetime
-from app.serializers.form_serializers import WebFormTemplate
 from fastapi import APIRouter, Request
+from app.services.responses import JSONResponse
+from app.services.templates_management import (run_search, db_connection,
+                                               WebFormTemplate)
+
 
 router = APIRouter()
 
 
 @router.post("/spot_form/", status_code=200)
 async def spot_web_form(request: Request):
-    cont_type = request.headers.get("Content-Type")
     cont = await request.form()
-    cont = cont.items()
-    print(cont)
-    return
+    if not cont:
+        return JSONResponse(status_code=204, content={"message": "empty form"})
+    resp = await run_search(
+        con=db_connection, form=cont, converter=WebFormTemplate, ignore="name"
+    )
+    return resp

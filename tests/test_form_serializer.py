@@ -1,9 +1,5 @@
 from app.serializers.form_serializers import WebFormTemplate
-import pytest
-# testcases for WebFormTemplate
-# empty form from request -- unpredicted behaviour
-# validator can work incorrect thus produce wrong output
-# if form is empty WebFormTemplate.get_template returns empty dict
+
 
 test_cases = [
     {

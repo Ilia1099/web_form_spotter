@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.api.routes import spot_form
+import sys
 
 app = FastAPI()
 app.include_router(spot_form.router)

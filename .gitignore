@@ -2,5 +2,6 @@ lib
 bin
 .idea
 __pycache__
+.pytest_cache
 .env
 wtf_tmpls.json

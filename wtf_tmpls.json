@@ -3,7 +3,7 @@
     "name": "SimpleTemplate", "full_name": "text", "phone_num": "phone"
   },
   "2": {
-    "name": "OrdinaryTemplate", "first_name": "text", "surname": "text",
+    "name": "OrdinaryTemplate", "full_name": "text", "surname": "text",
     "date_of_birth": "datetime", "phone_num": "phone"
   },
   "3": {
