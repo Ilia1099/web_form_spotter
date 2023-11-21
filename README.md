@@ -1,8 +1,8 @@
-# Web_form_spotter is an endpoint which accepts forms and searches for suitable templates within database
+# Web form spotter 
 
 ## Description:
-Accepts url_encoded forms if suitable form is found within db, the client 
-will receive a request with json, which keeps template's name;
+An endpoint which accepts forms and searches for suitable templates within database if suitable form is found, the client 
+will receive a response with json, which keeps template's name;
 If no matching template was found, the endpoint will return such template.
 
 ### Additional notes:
@@ -12,6 +12,7 @@ If no matching template was found, the endpoint will return such template.
   return (204)
 - form field "name" is reserved after template's name, thus when searching for comparison this field is ignored
 - populate_db.py provides a cli tool for pushing into db prebuilt templates
+- for storing data tinyDB is used, initial task requirements allowed to choose this option instead of MongoDB
 - for running on local machine you need to activate venv(wfs_venv) first
 - file .env is being used for storing db_name
 - to deploy this project you need to launch docker-compose file, thus 
@@ -33,6 +34,7 @@ If no matching template was found, the endpoint will return such template.
 - [python-decouple 3.8](https://pypi.org/project/python-decouple/)
 - [httpx 0.25.1](https://www.python-httpx.org)
 - [pytest 7.4.3](https://docs.pytest.org/en/7.4.x/)
+- [tinyDB](https://tinydb.readthedocs.io/en/latest/)
 
 # Notes on listed dependencies:
 - pytest provides testing functionality, but for correct work with 
