@@ -11,7 +11,9 @@ router = APIRouter()
 async def spot_web_form(request: Request):
     cont = await request.form()
     if not cont:
-        return JSONResponse(status_code=204, content={"message": "empty form"})
+        return JSONResponse(
+            status_code=200,
+            content={"message": "empty form"})
     resp = await run_search(
         con=db_connection, form=cont, converter=WebFormTemplate, ignore="name"
     )

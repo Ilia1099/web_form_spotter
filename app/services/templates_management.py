@@ -1,8 +1,8 @@
 from functools import reduce
 from typing import Type
 from starlette.datastructures import FormData
-from ..serializers.form_serializers import WebFormTemplate
-from ..database.connection import db_connection
+from app.serializers.form_serializers import WebFormTemplate
+from app.database.connection import db_connection
 from .responses import templ_was_found, templ_was_not_found
 from tinydb import where
 
